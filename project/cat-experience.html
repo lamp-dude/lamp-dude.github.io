@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" class="detail-presentation-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Cat Experience — a project by Robbie Ma." />
+    <meta name="theme-color" content="#f2e9dd" />
+    <title>Cat Experience — Robbie Ma</title>
+    <link rel="preload" href="../fonts/ArchivoBlack-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../garet/Garet-Book.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../project-detail.css" />
+  </head>
+  <body class="detail-body detail-body-with-presentation">
+    <div class="detail-shell">
+      <div class="detail-overview">
+      <header class="detail-header">
+        <a class="detail-identity" href="../projects/" aria-label="Back to all projects">
+          <span class="detail-logo" aria-hidden="true"><img src="../project-icons/portfolio.png" alt="" width="500" height="500" /></span>
+          <span class="detail-identity-text"><span>Game Development Portfolio</span><span>2023</span></span>
+        </a>
+        <a class="detail-back" href="../projects/"><span aria-hidden="true">←</span> Return to Projects</a>
+      </header>
+
+      <nav class="detail-page-nav" aria-label="Browse projects">
+        <a class="detail-arrow detail-arrow-prev" href="fishing-in-the-sky.html" aria-label="Previous project: Fishing in the sky"><svg viewBox="0 0 32 88" aria-hidden="true" fill="none"><path d="M28 4L4 44L28 84" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="detail-arrow detail-arrow-next" href="unity-flight-simulator.html" aria-label="Next project: Unity Flight Simulator"><svg viewBox="0 0 32 88" aria-hidden="true" fill="none"><path d="M4 4L28 44L4 84" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </nav>
+
+      <main class="detail-main">
+        <section class="detail-story" aria-label="Project story and credits">
+          <div class="detail-story-copy">
+            <p>This isn't really a game. It is just a cute little visual story I made in my spare time. I was bored and made something pretty. Made in Unity3D.</p>
+          </div>
+          <div class="detail-credits">
+            <div><strong>Created by:</strong><p>Robbie Ma</p></div>
+            <svg class="detail-engine-mark" viewBox="0 0 100 100" aria-hidden="true" fill="none">
+              <path d="M48 6L89 19L93 68L53 95L10 72L8 32Z" stroke="#000" stroke-width="7" stroke-linejoin="miter"/>
+              <path d="M48 6L53 46L93 68M8 32L53 46L10 72M53 46L53 95" stroke="#000" stroke-width="7" stroke-linejoin="miter"/>
+            </svg>
+          </div>
+        </section>
+
+        <section class="detail-feature" aria-label="Cat Experience project overview">
+          <div class="detail-feature-copy">
+            <h1 class="detail-heading">Cat Experience</h1>
+            <p class="detail-summary">A little story told using Unity3D.</p>
+          </div>
+          <img class="detail-image" src="../project-images/cat-experience.webp" decoding="async" fetchpriority="high" width="835" height="329" alt="Image from Cat Experience" />
+        </section>
+      </main>
+
+      <a class="detail-scroll-cue" href="#game" aria-label="Scroll to playable Cat Experience">
+        <svg viewBox="0 0 88 32" fill="none" aria-hidden="true"><path d="M4 4L44 28L84 4" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      </div>
+
+      <section class="detail-presentation" id="game" aria-label="Play Cat Experience">
+        <iframe
+          title="Play Cat Experience"
+          src="https://lamp-dude.github.io/CatExperience/"
+          loading="lazy"
+          allow="fullscreen; gamepad"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+    </div>
+  </body>
+</html>

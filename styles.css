@@ -1,0 +1,257 @@
+@font-face {
+  font-family: "Archivo Black";
+  src: url("fonts/ArchivoBlack-latin.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Garet";
+  src: url("garet/Garet-Book.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #f2e9dd;
+  --ink: #26251f;
+  --muted: #6a675f;
+  --line: #aaa398;
+  --accent: #309edb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Garet", "Avenir Next", Avenir, "Century Gothic", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-shell {
+  width: min(100% - 88px, 1500px);
+  min-height: 100svh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header,
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.site-header {
+  min-height: 90px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+}
+
+.site-mark {
+  width: fit-content;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: -0.079em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.site-mark-dot,
+.title-period {
+  color: var(--accent);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+.site-nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.site-year {
+  text-align: right;
+}
+
+.hero {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.55fr);
+  column-gap: clamp(40px, 8vw, 150px);
+  align-items: end;
+  padding: clamp(76px, 12vh, 150px) 0 clamp(92px, 14vh, 168px);
+}
+
+.eyebrow {
+  margin: 0 0 clamp(22px, 3.5vw, 52px) 0.12em;
+  color: var(--muted);
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Archivo Black", "Arial Black", sans-serif;
+  margin-left: -0.04em;
+  font-size: clamp(5.25rem, 10vw, 11rem);
+  font-weight: 400;
+  letter-spacing: -0.079em;
+  line-height: 0.84;
+  text-transform: uppercase;
+}
+
+.hero-details {
+  max-width: 360px;
+  padding-bottom: 0.3em;
+}
+
+.intro-rule {
+  width: 48px;
+  height: 2px;
+  margin-bottom: 28px;
+  background: var(--accent);
+}
+
+.intro {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.65vw, 1.45rem);
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.site-footer {
+  min-height: 82px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.social-link {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--accent);
+  background-color: rgb(48 158 219 / 12%);
+}
+
+.social-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.social-icon {
+  display: block;
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+.footer-year {
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .page-shell {
+    width: min(100% - 40px, 560px);
+  }
+
+  .site-header {
+    min-height: 76px;
+    grid-template-columns: 1fr auto;
+  }
+
+  .site-nav {
+    justify-content: flex-end;
+    gap: 18px;
+  }
+
+  .site-year {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    align-content: center;
+    align-items: start;
+    gap: clamp(64px, 11vh, 100px);
+    padding: 76px 0 80px;
+  }
+
+  .eyebrow {
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-size: clamp(4.6rem, 17vw, 8rem);
+  }
+
+  .hero-details {
+    max-width: 430px;
+  }
+
+  .site-footer {
+    grid-template-columns: auto 1fr auto;
+    min-height: 68px;
+    gap: 8px;
+  }
+
+  .social-links {
+    gap: 2px;
+  }
+
+  .social-link {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: clamp(4.25rem, 17.5vw, 4.8rem);
+  }
+}
